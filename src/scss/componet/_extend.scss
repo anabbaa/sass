@@ -1,0 +1,26 @@
+//this is normal styling i use it when i need them
+%main-box {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+  }
+  
+  .ads {
+    @extend %main-box;
+    font-size: 20px;
+    color: red;
+  }
+
+  //here i take this class styling and applied utvina nother elemnet
+
+  .main-box {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+  }
+  
+  .ads {
+    @extend .main-box;
+    font-size: 20px;
+    color: red;
+  }

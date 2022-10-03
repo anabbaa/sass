@@ -1,0 +1,48 @@
+$themes: red, green, blue, orange;
+// theme is a name i schoose but its better to have a logic name 
+//here i have for example in first loop class red-theme which have 
+//two childern class red-theme .product and .red-theme . title
+// in the following role we have instead of red green 
+
+@each $theme in $themes {
+  .#{$theme}-theme {
+    .product {
+      background-color: white;
+      border-bottom: 2px solid $theme;
+      .title {
+        color: $theme;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+$socials: (
+  "facebook": blue,
+  "youtube": red,
+  "github": black,
+  "twitter": indianred,
+);
+//here i have key and value gives for every one name
+
+@each $name, $color in $socials {
+  .#{$name} {
+    background-color: $color;
+    color: white;
+    &::before {
+      content: $name;
+    }
+  }
+}
+// here i made a destruction
+$classes: "one" 20px red, "two" 15px green, "three" 22px blue;
+
+@each $class, $font, $color in $classes {
+  .#{$class} {
+    font-size: $font;
+    background-color: $color;
+    color: white;
+    padding: $font / 2;
+  }
+}

@@ -1,0 +1,16 @@
+// here i sart with 1 while i => 10 do something after i will increment 1 to start 
+//in order to assure it wille add and not haveing inifinite loop then in every
+//loop i give it aname you can change the name by andy iperation ofcourse in the name only 
+//number i donot need py in the name of the class then i have stylling for width in every loop
+// i have number of start multpliy 100px and in height i have the number of start multiply 
+//with 100px then the result will be divided into two so i have half height of width
+
+$start: 1;
+
+@while $start <= 10 {
+  .width-#{$start * 100} {
+    width: $start * 100px;
+    height: ($start * 100px) / 2;
+  }
+  $start: $start + 1;
+}

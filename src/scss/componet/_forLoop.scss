@@ -1,0 +1,16 @@
+//here i declare a variable then give to the class a name first loop it will be 0 then
+//100 before it + name of variable because i want it will be 100 in the first loop then
+// first loop i want width will be variable it is 0 + 100px so it will be 100px first loop
+// will ended 100 to the variable now itis 100 in the second loop add 100 + variable which
+//is already 100 and add 100 then it will be 200 width will be variable which is already 
+// 100 then add to it 100px so it will be 200px and so on 
+$dimensions: 0;
+
+@for $i from 1 through 10 {
+  .circle-#{100 + $dimensions} {
+    width: $dimensions + 100px;
+    height: $dimensions + 100px;
+    border-radius: 50%;
+  }
+  $dimensions: $dimensions + 100;
+}

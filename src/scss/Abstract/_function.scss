@@ -1,0 +1,20 @@
+/// Function To Get Element Height
+///
+/// @param {size}
+/// Element Width
+/// @return {int}
+/// Return Element Height => Width / 2
+
+@function half($size) {
+    @return $size / 2;
+  }
+
+  // this function calculate many values to add for a dimension 
+  
+  @function calculate($sizes...) {
+    $total: 0;
+    @each $size in $sizes {
+      $total: $total + $size;
+    }
+    @return $total;
+  }

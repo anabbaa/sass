@@ -1,0 +1,13 @@
+//here i only used built in function to build grid this function gives me the percentage 
+//first column when i divided it to the whole numbers of columns in the second loop i 
+// will get the width of second column by divided its number 2 with the whole number
+//of grid-cols
+
+
+$grid_cols: 12;
+
+@for $i from 1 through $grid_cols {
+  .col-#{$i} {
+    width: percentage($i / $grid_cols);
+  }
+}

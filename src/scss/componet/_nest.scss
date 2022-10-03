@@ -1,0 +1,71 @@
+.parent{
+    font-size: 100px;
+    .son{
+font-size: 70px;
+    }
+    .child{
+font-size: 50px;
+    }
+}
+//here i grouped two different parent and lettheir son have the same styling 
+//by nesting
+.parent1, .parent2{
+    font-size: 100px;
+    .son{
+font-size: 66px;
+    }
+}
+//here i select direct child  for all
+.parent3 >{
+.test1{
+color: red;
+}
+.test2{
+color: green;
+}
+}
+// or i can do if you want to exist from selector only gou out from nesting circle
+//.& refer to parent
+.parent3{
+    > {
+.test1{
+
+}
+.test2{
+
+}
+
+    }
+    .not-direct-child{
+
+    }
+    &{}
+}
+//if i want to exlude parent from stxling
+.parent3{
+    .test{
+
+    }
+    :not(&){
+
+    }
+}
+// you can also add attribut selector in the nesting
+.parent{
+    .test{
+
+    }
+    [dir=rtl] .test22{
+        
+    }
+}
+
+// here i want specific element to be direct child
+.parent3 {
+    > .test1{
+    color: red;
+    }
+    .test2{
+    color: green;
+    }
+    }
